@@ -783,3 +783,44 @@ input[type="range"]::-moz-range-thumb {
         aspect-ratio: 510 / 360;
     }
 }
+
+/* --- Correção Cirúrgica para o Computador --- */
+.desenho {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Garante que a paleta, o pincel e o canvas fiquem lado a lado no PC */
+.desenho .area-desenho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Deixa a paleta em grade vertical no computador */
+.desenho .paleta-cores {
+    display: grid;
+    grid-template-columns: repeat(2, 30px);
+    gap: 8px;
+    margin: 0;
+}
+
+/* Faz o controle do pincel crescer para CIMA no PC */
+.desenho .controle-pincel-vertical #tamanho-pincel {
+    transform: rotate(180deg);
+}
+
+/* Remove conflitos de margem da galeria */
+.galeria-desenhos {
+    width: 100%;
+    max-width: 600px;
+}
