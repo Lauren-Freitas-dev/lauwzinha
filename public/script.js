@@ -3,6 +3,15 @@ let canvas = document.getElementById('quadro-desenho');
 let contexto = canvas.getContext('2d');
 let desenhando = false;
 let corAtual = "black";
+let tamanhoAtual = 3;
+
+let sliderTamanho = document.getElementById('tamanho-pincel');
+let valorTamanho = document.getElementById('valor-tamanho');
+
+sliderTamanho.addEventListener('input', function(){
+    tamanhoAtual = sliderTamanho.value;
+    valorTamanho.textContent = tamanhoAtual;
+});
 
 let botoesCores = document.querySelectorAll('.cor-botao');
 botoesCores.forEach(function(botao){
