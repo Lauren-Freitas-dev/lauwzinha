@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #ffd1e8, #ffe6ed);
+    background: linear-gradient(to bottom, #fa8ead, #ffe6ed);
     background-attachment: fixed;
     font-family: 'yuyu', sans-serif;
     display: flex;
