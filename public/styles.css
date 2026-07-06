@@ -340,6 +340,8 @@ input#campo-mensagens,
 }
 
 .desenho {
+    width: 100%;
+    max-width: 400px;
     justify-content: center;
     align-items: center;
 }
@@ -539,15 +541,6 @@ input[type="range"]::-moz-range-thumb {
   max-width: 400px;
 }
 
-  .coluna-esquerda,
-  .coluna-direita,
-  .player,
-  .paleta-cores,
-  .desenho {
-    width: 100%;
-    max-width: 400px;
-  }
-
   .profile-card {
     width: 100%;
   }
@@ -595,7 +588,7 @@ input[type="range"]::-moz-range-thumb {
   #tamanho-pincel {
     -webkit-appearance: none;
     writing-mode: horizontal-tb;
-    width: 100%;
+    width: 80px;
     height: 6px;
   }
 
