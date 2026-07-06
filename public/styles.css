@@ -595,3 +595,20 @@ margin-bottom: 2px;
         gap: 10px;
     }
 }
+
+.desenho {
+    background-color: #ffffff !important;
+}
+
+#galeria-desenhos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    #galeria-desenhos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
