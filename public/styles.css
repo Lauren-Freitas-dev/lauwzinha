@@ -320,7 +320,6 @@ input#campo-mensagens,
 }
 
 .desenho {
-    display: grid;
     justify-content: center;
     align-items: center;
 }
