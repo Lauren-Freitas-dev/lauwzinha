@@ -523,26 +523,90 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 900px) {
-    flex-direction: column !important;
-    gap: 10px;
-    width: 100%;
-    flex-direction: row !important; /* Coloca número, slider e texto lado a lado */
-    width: 100%;
-    max-width: 510px; /* Alinha com a largura máxima do canvas */
-    height: auto !important;
-    justify-content: center;
+  .colunas {
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .coluna-esquerda,
+  .coluna-direita,
+  .player,
+  .desenho {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .profile-card {
+    width: 100%;
+  }
+
+  #lista-recadinhos {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 0;
+  }
+
+  .player {
+    width: 90%;
+    max-width: 360px;
+    margin-top: 0;
+  }
+
+  .btn-social {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #quadro-desenho {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 510 / 360;
+  }
+
+  .desenho-item {
+    width: 100px;
+  }
+
+    @media (max-width: 900px){
+{
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+ {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+    max-width: 400px !important;
+  }
+ {
+    flex-direction: row !important; /* Coloca os itens lado a lado */
+    width: 100% !important;
+    max-width: 400px !important;
+    height: auto !important; /* Reseta a altura de 360px do PC */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+ {
     -webkit-appearance: none !important;
     appearance: none !important;
     writing-mode: horizontal-tb !important;
-    width: 60% !important; /* Dá um tamanho bom para deslizar com o polegar */
-    height: 6px !important;
+    width: 60% !important;
+    height: 8px !important;
+  }
     writing-mode: horizontal-tb !important;
     transform: none !important;
-    font-size: 16px;
+    font-size: 14px !important;
   }
-}
+} }
 
   .coluna-esquerda,
   .coluna-direita,
