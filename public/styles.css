@@ -588,17 +588,17 @@ input[type="range"]::-moz-range-thumb {
     height: auto;
   }
 
-  #tamanho-pincel {
-    -webkit-appearance: none;
-    writing-mode: horizontal-tb;
-    width: 30px;
-    height: 6px;
-  }
-
-  .controle-pincel-vertical label {
-    writing-mode: vertical-tb;
-    transform: none;
-  }
+#tamanho-pincel {
+    -webkit-appearance: slider-horizontal;
+    appearance: none;
+    writing-mode: vertical-lr;
+    width: 6px;
+    height: 100%;
+    border-radius: 999px;
+    background: #ddd;
+    outline: none;
+    cursor: pointer;
+    transform: rotate(180deg); 
 }
 
 .area-desenho {
