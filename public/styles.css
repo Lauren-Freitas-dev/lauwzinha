@@ -618,7 +618,6 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
 }
 
-/* Bolinha (thumb) - Chrome, Edge, Safari */
 #tamanho-pincel::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -636,7 +635,6 @@ input[type="range"]::-moz-range-thumb {
     transform: scale(1.15);
 }
 
-/* Bolinha (thumb) - Firefox */
 #tamanho-pincel::-moz-range-thumb {
     width: 20px;
     height: 20px;
@@ -652,9 +650,12 @@ input[type="range"]::-moz-range-thumb {
     transform: scale(1.15);
 }
 
-/* Trilho (track) - Firefox precisa disso separado */
 #tamanho-pincel::-moz-range-track {
     width: 6px;
     border-radius: 999px;
     background: #ddd;
+}
+
+.desenhalgoaqui {
+    padding: 10px 20px;
 }
