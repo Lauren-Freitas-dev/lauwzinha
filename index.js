@@ -8,7 +8,10 @@ app.use(express.json());
 app.use(cors());
 
 const uri = process.env.MONGODB_URI;
-const client = new MongoClient(uri);
+const client = new MongoClient(uri, {
+  tls: true,
+  tlsAllowInvalidCertificates: true
+});
 
 let db; // vai guardar a conexão
 
