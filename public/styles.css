@@ -257,12 +257,12 @@ input#campo-mensagens,
 }
 
 #quadro-desenho {
-    display: grid;
+    display: flex;
 }
 
 #btn-enviar-desenho {
     margin: 0 auto;
-    max-width: 200px;
+    max-width: 80px;
     border-radius: 20px;
     font-size: 20px;
     display: flex;
@@ -278,7 +278,7 @@ input#campo-mensagens,
 
 #btn-limpar {
     margin: 0 auto;
-    max-width: 200px;
+    max-width: 80px;
     border-radius: 20px;
     font-size: 20px;
     display: flex;
