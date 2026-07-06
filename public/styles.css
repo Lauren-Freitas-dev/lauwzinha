@@ -186,6 +186,7 @@ textarea#campo-mensagens {
 }
 
 #lista-recadinhos {
+    max-width: 450px;
     text-align: center;
     font-size: 18px;
     border: 2px solid #ff91c5;
