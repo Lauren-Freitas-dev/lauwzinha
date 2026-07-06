@@ -482,7 +482,7 @@ margin-bottom: 2px;
     border-top: 1px solid #ffd6e8;
     padding-top: 10px;
     font-family: 'Manronpe', sans-serif;
-    width: 100%; /* Obriga a respeitar a largura do player */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -522,6 +522,7 @@ margin-bottom: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .cover {
