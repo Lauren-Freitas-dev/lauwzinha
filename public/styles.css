@@ -588,7 +588,7 @@ input[type="range"]::-moz-range-thumb {
   #tamanho-pincel {
     -webkit-appearance: none;
     writing-mode: horizontal-tb;
-    width: 80px;
+    width: 30px;
     height: 6px;
   }
 
