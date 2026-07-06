@@ -8,8 +8,6 @@ let botoesCores = document.querySelectorAll('.cor-botao');
 botoesCores.forEach(function(botao){
     botao.addEventListener('click', function(){
         corAtual = botao.getAttribute('data-cor');
-    });
-});
 
 
 function pegarPosicao(evento) {
@@ -81,9 +79,7 @@ function carregarMensagens() {
         novoParagrafo.innerHTML = `<strong>${mensagemAtual.nome}:</strong> ${mensagemAtual.texto}`;
         container.appendChild(novoParagrafo);
 });
-        });
-}
-
+            
 botao_mensagens.addEventListener('click', function(){
     let caixa_mensagens = document.getElementById("campo-mensagens").value;
     let nome_da_pessoa = document.getElementById("campo-nome").value;
