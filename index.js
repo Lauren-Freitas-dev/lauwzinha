@@ -98,8 +98,6 @@ app.post('/desenhos', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-const PORT = process.env.PORT || 3000;
-
 async function start() {
   await conectarDB();
   app.listen(PORT, '0.0.0.0', () => {
