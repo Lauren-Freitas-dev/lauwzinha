@@ -261,6 +261,7 @@ input#campo-mensagens,
 }
 
 #btn-enviar-desenho {
+    margin: 0 auto;
     max-width: 200px;
     border-radius: 20px;
     font-size: 20px;
@@ -656,9 +657,4 @@ input[type="range"]::-moz-range-thumb {
     background: #ddd;
 }
 
-.btn-enviar-desenho {
-    justify-content: block;
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
+
