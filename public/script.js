@@ -9,7 +9,6 @@ botoesCores.forEach(function(botao){
     botao.addEventListener('click', function(){
         corAtual = botao.getAttribute('data-cor');
 
-
 function pegarPosicao(evento) {
     const retangulo = canvas.getBoundingClientRect();
     const escalaX = canvas.width / retangulo.width;
@@ -61,8 +60,7 @@ canvas.addEventListener('touchstart', iniciarDesenho, { passive: false });
 canvas.addEventListener('touchmove', desenharNoCanvas, { passive: false });
 canvas.addEventListener('touchend', pararDesenho);
 canvas.addEventListener('touchcancel', pararDesenho);
-});
-
+        
 let botao_limpar = document.getElementById('btn-limpar');
 botao_limpar.addEventListener('click', function(){
     contexto.clearRect(0, 0, canvas.width, canvas.height);
