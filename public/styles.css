@@ -728,49 +728,58 @@ input[type="range"]::-moz-range-thumb {
     transform: rotate(180deg);
 }
 
-@media (max-width: 900px) {
-  .desenho {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 15px;
-  }
-
-  .area-desenho {
-    flex-direction: column !important;
-    gap: 15px;
+.desenho-container {
     width: 100%;
-  }
-
-  .paleta-cores {
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 0 !important;
-  }
-
-  .controle-pincel-vertical {
-    flex-direction: row !important;
-    height: auto !important;
-    gap: 10px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
+    gap: 20px;
+}
 
-  .controle-pincel-vertical label {
-    writing-mode: horizontal-tb !important;
-    transform: none !important;
-  }
+.controle-pincel-vertical input[type="range"] {
+    transform: scaleY(-1);
+}
 
-  #tamanho-pincel {
-    writing-mode: horizontal-tb !important;
-    width: 150px !important;
-    height: 6px !important;
-    transform: none !important;
-  }
+/* Modo Celular (Telas menores que 900px) */
+@media (max-width: 900px) {
+    .desenho-container .area-desenho {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 0 15px;
+    }
 
-  #quadro-desenho {
-    width: 100% !important;
-    max-width: 450px;
-    height: auto !important;
-    aspect-ratio: 510 / 360;
-  }
+    .desenho-container .paleta-cores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    /* Slider vira horizontal no celular para não bugar */
+    .desenho-container .controle-pincel-vertical {
+        flex-direction: row;
+        height: auto;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .desenho-container .controle-pincel-vertical label,
+    .desenho-container #tamanho-pincel {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+
+    .desenho-container #tamanho-pincel {
+        width: 150px;
+        height: 6px;
+    }
+
+    .desenho-container #quadro-desenho {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        aspect-ratio: 510 / 360;
+    }
 }
