@@ -64,6 +64,8 @@ h4, h5 {
 }
 
 .coluna-direita {
+    gap: 20px;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -190,7 +192,7 @@ textarea#campo-mensagens {
     background-color: #ffffff;
     color: #333333;
     max-width: 250px;
-    width: 80%;
+    width: 00%;
     margin-top: 30px;
     margin-right: 40px;
     border-radius: 35px;
