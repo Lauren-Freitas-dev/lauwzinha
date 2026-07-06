@@ -598,13 +598,12 @@ input[type="range"]::-moz-range-thumb {
     height: 6px;
   }
 
-  .controle-pincel-vertical label {
+  .controle-pincel-horizontal label {
     writing-mode: horizontal-tb;
     transform: none;
   }
 }
 
-/* Container que junta o canvas com o slider de pincel lado a lado */
 .area-desenho {
     display: flex;
     align-items: center;
@@ -639,7 +638,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #tamanho-pincel {
-    -webkit-appearance: slider-vertical;
+    -webkit-appearance: slider-horizontal;
     appearance: none;
     writing-mode: vertical-lr;
     width: 6px;
