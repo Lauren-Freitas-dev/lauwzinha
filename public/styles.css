@@ -725,9 +725,6 @@ input[type="range"]::-moz-range-thumb {
   gap: 15px;
   margin-top: 15px;
 }
-
-/* Correção do sentido do pincel para aumentar para CIMA */
-#tamanho-pincel {
     transform: rotate(180deg);
 }
 
