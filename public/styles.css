@@ -575,7 +575,7 @@ input[type="range"]::-moz-range-thumb {
 
   .area-desenho {
       
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .controle-pincel-horizontal {
