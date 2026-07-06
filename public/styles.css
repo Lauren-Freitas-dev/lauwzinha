@@ -548,3 +548,76 @@ input[type="range"]::-moz-range-thumb {
 }
   padding: 10px 0;
 }
+
+.controle-pincel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    font-family: inherit;
+}
+
+.controle-pincel label {
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+}
+
+#tamanho-pincel {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 6px;
+    border-radius: 999px;
+    background: #ddd;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Bolinha (thumb) - Chrome, Edge, Safari */
+#tamanho-pincel::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff69b4;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+#tamanho-pincel::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* Bolinha (thumb) - Firefox */
+#tamanho-pincel::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff69b4;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+#tamanho-pincel::-moz-range-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* Trilho (track) - Firefox precisa disso separado */
+#tamanho-pincel::-moz-range-track {
+    height: 6px;
+    border-radius: 999px;
+    background: #ddd;
+}
+
+#valor-tamanho {
+    font-weight: bold;
+    color: #ff69b4;
+    min-width: 20px;
+    display: inline-block;
+}
