@@ -222,7 +222,6 @@ textarea#campo-mensagens {
 }
 
 #btn-enviar:hover {
-    background-color: #ef88b8;
 margin-bottom: 2px;
     white-space: nowrap;
     overflow: hidden;
@@ -374,11 +373,18 @@ margin-bottom: 2px;
 }
 
 /* ==========================================================================
-   5. SEÇÃO DO DESENHO (RODAPÉ CONFIGURADO)
-   ========================================================================== */
+   5. SEÇÃO DO DESENHO (RODAPÉ)
+   ========================================================================= */
 .desenho {
-    width: 100%;
-    margin: 50px 0;
+    border: 2px solid #ff91c5;
+    background-color: #ffffff;
+    color: #333333;
+    max-width: 700px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 35px;
+    box-shadow: 0 8px 24px rgba(255, 145, 196, 0.6);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,7 +449,7 @@ margin-bottom: 2px;
     background: #ddd;
     outline: none;
     cursor: pointer;
-    transform: scaleY(-1); /* Inverte o slider vertical: aumenta para CIMA */
+    transform: scaleY(-1); /* Aumenta para cima */
 }
 
 #tamanho-pincel::-webkit-slider-thumb {
@@ -467,6 +473,13 @@ margin-bottom: 2px;
     cursor: pointer;
 }
 
+#quadro-desenho {
+    border: 2px solid #333333;
+    background-color: #ffffff;
+    border-radius: 15px;
+    cursor: crosshair;
+}
+
 .botoes-desenho {
     display: flex;
     gap: 15px;
@@ -475,33 +488,53 @@ margin-bottom: 2px;
 .botoes-desenho button {
     font-family: 'Manronpe', sans-serif;
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 8px 24px;
     border: 2px solid #333;
     border-radius: 12px;
     background-color: #fff;
     cursor: pointer;
     font-weight: bold;
+    transition: transform 0.1s ease;
+}
+
+.botoes-desenho button:hover {
+    transform: scale(1.05);
 }
 
 #btn-enviar-desenho {
     background-color: #ff91c5;
 }
 
+/* Organiza as fotos salvas em linhas de 3 em 3 elementos */
 .galeria-desenhos {
     width: 100%;
-    max-width: 600px;
     margin-top: 20px;
+    border-top: 2px dashed #ff91c5;
+    padding-top: 20px;
 }
 
-#quadro-desenho {
-    border: 2px solid #333333;
-    background-color: #ffffff;
-    border-radius: 15px;
-    cursor: crosshair;
+.galeria-desenhos h2 {
+    margin-bottom: 20px;
+}
+
+/* O segredo para exibir 3 por linha no desktop */
+.galeria-desenhos div:not(.botoes-desenho) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.galeria-desenhos img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 /* ==========================================================================
-   6. RESPONSIVIDADE (CELULAR / MEDIA QUERY)
+   6. RESPONSIVIDADE (CELULAR)
    ========================================================================== */
 @media (max-width: 900px) {
     .colunas {
@@ -514,6 +547,11 @@ margin-bottom: 2px;
         width: 80%;
     }
 
+    .desenho {
+        width: 95%;
+        padding: 15px;
+    }
+
     .area-desenho {
         flex-direction: column;
         gap: 15px;
@@ -523,6 +561,7 @@ margin-bottom: 2px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 6px;
     }
 
     .controle-pincel-vertical {
@@ -548,5 +587,11 @@ margin-bottom: 2px;
         max-width: 450px;
         height: auto;
         aspect-ratio: 510 / 360;
+    }
+
+    /* Exibe em 2 por linha ou 1 por linha no celular para não esmagar */
+    .galeria-desenhos div:not(.botoes-desenho) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
