@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. FONTES E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 @font-face {
     font-family: 'Manronpe';
     src: url('fonts/Manrope/Manrope-VariableFont_wght.ttf');
@@ -10,17 +13,10 @@
     font-weight: normal;
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-p {
-    font-size: 35px;
-    font-weight: 700;
 }
 
 body {
@@ -31,14 +27,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 
-#quadro-desenho {
-    border: 2px solid #333333;
-    background-color: #ffffff;
-    border-radius: 15px;
-    cursor: crosshair;
+p {
+    font-size: 35px;
+    font-weight: 700;
 }
 
 h1, h2, h3 {
@@ -47,11 +40,14 @@ h1, h2, h3 {
     text-align: center;
 }
 
-h4, h5, h3 {
+h4, h5 {
     font-family: 'Manronpe', sans-serif;
     color: darkgray;
 }
 
+/* ==========================================================================
+   2. ESTRUTURA DE COLUNAS (TOPO / DESKTOP)
+   ========================================================================== */
 .colunas {
     display: flex;
     flex-direction: row;
@@ -77,6 +73,9 @@ h4, h5, h3 {
     margin-bottom: 10px;
 }
 
+/* ==========================================================================
+   3. COMPONENTES: PERFIL E RECADOS
+   ========================================================================== */
 .profile-card {
     font-family: "yuyu";
     margin-top: 30px;
@@ -92,9 +91,7 @@ h4, h5, h3 {
     box-shadow: 0 8px 24px rgba(255, 145, 196, 0.6);
 }
 
- 
 .profile-picture {
-    align-items: center;
     width: 100px;
     height: 100px;
     background-color: black;
@@ -118,47 +115,28 @@ h4, h5, h3 {
 }
 
 .btn-social {
-  text-decoration: none; 
-  color: #332228;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  line-height: 1;
-  white-space: nowrap;
-  width: 200px;
-  padding: 12px 30px; 
-  margin: 10px 0;
-  background-color: #ffcce6; 
-  border: 2px solid #332228;
-  border-radius: 20px;
-  font-family: 'Manronpe';
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
+    text-decoration: none; 
+    color: #332228;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    width: 200px;
+    padding: 12px 30px; 
+    margin: 10px 0;
+    background-color: #ffcce6; 
+    border: 2px solid #332228;
+    border-radius: 20px;
+    font-family: 'Manronpe';
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 
 .btn-social:hover {
     background-color: #ef88b8;
     transform: translateY(-5px);
-}
-
-textarea#campo-mensagens, 
-input#campo-mensagens,
-.campo-mensagens {
-    padding: 15px;
-    max-width: 400px;
-    font-family: 'Manronpe';
-    text-align: center;
-    resize: none;
-    background-color: #ffd4f6;
-    border: 2px solid #333333;
-    color: #333;
-    width: 95%;
-    height: 55%;
-    padding: 10px;
-    border-radius: 0 0 20px 20px;
 }
 
 .mensagens {
@@ -174,8 +152,32 @@ input#campo-mensagens,
     border: 3px solid #ff91c5;
 }
 
-.mensagens h1 {
-    font-family: "yuyu";
+#campo-nome {
+    padding: 10px;
+    max-width: 400px;
+    font-family: 'Manronpe';
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffd4f6;
+    border: 2px solid #333333;
+    color: #333;
+    width: 95%;
+    height: 55%;
+    border-radius: 20px 20px 0 0;
+}
+
+textarea#campo-mensagens {
+    padding: 10px;
+    max-width: 400px;
+    font-family: 'Manronpe';
+    text-align: center;
+    resize: none;
+    background-color: #ffd4f6;
+    border: 2px solid #333333;
+    color: #333;
+    width: 95%;
+    height: 55%;
+    border-radius: 0 0 20px 20px;
 }
 
 #lista-recadinhos {
@@ -192,40 +194,6 @@ input#campo-mensagens,
     box-shadow: 0 8px 24px rgba(255, 145, 196, 0.6);
 }
 
-#btn-enviar {
-    font-family: 'Manronpe' !important;
-    font-size: 16px;
-    padding: 8px 12px !important;
-    font-weight: bold !important;
-    text-align: center !important;
-    margin-top: 20px !important;
-    color: #333 !important;
-    border: 2px solid #333;
-    background-color: #ff91c5!important;
-    border-radius: 16px !important;
-    cursor: pointer !important;
-}
-
-#btn-enviar:hover {
-    background-color: #ef88b8;
-    transform: translateY(-5px);
-}
-
-#campo-nome {
-    padding: 15px;
-    max-width: 400px;
-    font-family: 'Manronpe';
-    text-align: center;
-    margin-top: 20px;
-    resize: none;
-    background-color: #ffd4f6;
-    border: 2px solid #333333;
-    color: #333;
-    width: 95%;
-    height: 55%;
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
-}
 .recadinho {
     font-family: 'Manronpe';
     background-color: #ffd4f6;
@@ -238,589 +206,76 @@ input#campo-mensagens,
     margin-top: 20px;
 }
 
-.paleta-cores {
-    margin-top: 20px;
-    margin-left: 30px;
-    display: grid;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.cor-botao {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid #333333;
-    cursor: pointer;
-}
-
-#quadro-desenho {
-    display: flex;
-}
-
-#btn-enviar-desenho {
-    box-sizing: border-box;
-    max-width: 150px;
-    border-radius: 20px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    background-color: #ff91c5;
-}
-
-
-#btn-enviar-desenho {
-   width: 180px;      
-  height: 45px;   
-  border-radius: 10px;
-  font-size: 16px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333;
-  background-color: #ff91c5;
-  border: 2px solid #333333;
-  cursor: pointer;
-  font-family: 'Manronpe', sans-serif;
-  font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-#btn-limpar  {
-  width: 180px;      
-  height: 45px;   
-  border-radius: 10px;
-  font-size: 16px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333;
-  background-color: #ff91c5;
-  border: 2px solid #333333;
-  cursor: pointer;
-  font-family: 'Manronpe', sans-serif;
-  font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-
-#btn-limpar:hover {
-    background-color: #ef88b8;
-    transform: translateY(-5px);
-}
-
-#btn-enviar-desenho:hover {
-    background-color: #ef88b8;
-    transform: translateY(-5px);
-}
-
-.galeria-desenhos {
-    background-color: #ffffff;
-    border-radius: 20px;
-    border: 2px solid #ff91c5;
-    padding: 15px;
-    margin-top: 20px;
+#btn-enviar {
+    font-family: 'Manronpe';
+    font-size: 16px;
+    padding: 8px 12px;
+    font-weight: bold;
     text-align: center;
+    margin-top: 20px;
+    color: #333;
+    border: 2px solid #333;
+    background-color: #ff91c5;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.desenho-item {
-    width: 150px;
-    height: auto;
-    border: 2px solid #333333;
-    border-radius: 10px;
-    margin: 5px;
-}
-
-.desenho-item:hover {
+#btn-enviar:hover {
+    background-color: #ef88b8;
     transform: translateY(-5px);
 }
 
-.desenho {
-    width: 100%;
-    max-width: 600px
-    margin-top: 50px
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/* ==========================================================================
+   4. COMPONENTE: PLAYER DE MÚSICA
+   ========================================================================== */
 .player {
-  width: 360px;
-  background: #fff0f6;
-  border-radius: 24px;
-  padding: 20px;
-  margin-top: 25px;
-  box-shadow: 0 20px 40px rgba(219, 39, 119, 0.35);
-  border: 3px solid #ffb6d9;
-  text-align: center;
+    width: 360px;
+    background: #fff0f6;
+    border-radius: 24px;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 0 20px 40px rgba(219, 39, 119, 0.35);
+    border: 3px solid #ffb6d9;
+    text-align: center;
 }
 
 .cover {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #ffe1f0, #ff7ab8 70%, #d6336c);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(214, 51, 108, 0.4);
-  border: 6px solid #fff;
-  animation: spin 12s linear infinite;
-  animation-play-state: paused;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffe1f0, #ff7ab8 70%, #d6336c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(214, 51, 108, 0.4);
+    border: 6px solid #fff;
+    animation: spin 12s linear infinite;
+    animation-play-state: paused;
 }
-.cover.playing { animation-play-state: running; }
+
+.cover.playing { 
+    animation-play-state: running; 
+}
+
 .cover::after {
-  content: "";
-  width: 40px;
-  height: 40px;
-  background: #fff0f6;
-  border-radius: 50%;
-  border: 2px solid #d6336c;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: #fff0f6;
+    border-radius: 50%;
+    border: 2px solid #d6336c;
 }
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@keyframes spin { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+}
 
 .track-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #b3184f;
-  margin-bottom: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.track-sub {
-  font-size: 13px;
-  color: #d6537f;
-  margin-bottom: 18px;
-}
-
-.progress-area {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-.time { font-size: 11px; color: #b3184f; width: 34px; }
-.time.end { text-align: right; }
-
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 6px;
-  border-radius: 4px;
-  background: #ffc2dd;
-  outline: none;
-  flex: 1;
-}
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #d6336c;
-  cursor: pointer;
-  box-shadow: 0 0 0 4px rgba(214,51,108,0.2);
-}
-input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #d6336c;
-  cursor: pointer;
-  border: none;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 20px;
-}
-.btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #d6336c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.15s ease;
-}
-.btn:hover { transform: scale(1.15); }
-.btn svg { width: 22px; height: 22px; fill: currentColor; }
-
-.btn-play {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ff8fc7, #d6336c);
-  color: #fff;
-  box-shadow: 0 8px 16px rgba(214,51,108,0.45);
-}
-.btn-play svg { width: 26px; height: 26px; }
-
-.bottom-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.volume {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex: 1;
-}
-.volume input[type="range"] { width: 90px; flex: none; }
-
-.file-label {
-  background: #ffe1f0;
-  color: #b3184f;
-  border: 2px dashed #ffb6d9;
-  border-radius: 12px;
-  padding: 6px 10px;
-  font-size: 12px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-.file-label:hover { background: #ffd1e8; }
-#fileInput { display: none; }
-
-.playlist {
-  margin-top: 18px;
-  max-height: 140px;
-  overflow-y: auto;
-  text-align: left;
-  border-top: 2px dashed #ffc2dd;
-  padding-top: 10px;
-}
-.playlist::-webkit-scrollbar { width: 6px; }
-.playlist::-webkit-scrollbar-thumb { background: #ffb6d9; border-radius: 4px; }
-
-.playlist-item {
-  padding: 8px 10px;
-  border-radius: 10px;
-  font-size: 13px;
-  color: #b3184f;
-  cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.playlist-item:hover { background: #ffe1f0; }
-.playlist-item.active {
-  background: #ff8fc7;
-  color: #fff;
-  font-weight: 700;
-}
-
-.empty-msg {
-  font-size: 12px;
-  color: #d6537f;
-}
-
-@media (max-width: 900px) {
-  .area-desenho {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .paleta-cores {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 0;
-    width: 100%;
-    max-width: 400px;
-  }
-
-    flex-direction: row-reverse; 
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .controle-pincel-vertical label {
-    writing-mode: horizontal-tb;
-    transform: none;
-  }
-
-  #tamanho-pincel {
-    writing-mode: horizontal-tb;
-    width: 150px;
-    height: 6px;
-    transform: none; /* Reseta a rotação no modo horizontal do celular */
-  }
-
-  #quadro-desenho {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    aspect-ratio: 510 / 360;
-  }
-}
-    .paleta-cores {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 0;
-  width: 100%;
-  max-width: 400px;
-}
-
-  .profile-card {
-    width: 100%;
-  }
-
-  #lista-recadinhos {
-    width: 100%;
-    max-width: 400px;
-    margin-right: 0;
-  }
-
-  .player {
-    width: 90%;
-    max-width: 360px;
-    margin-top: 0;
-  }
-
-  .btn-social {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  #quadro-desenho {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    aspect-ratio: 510 / 360;
-  }
-
-  .desenho-item {
-    width: 100px;
-  }
-
-  .area-desenho {
-      
-    flex-direction: column;
-  }
-
-  .controle-pincel-vertical {
-    flex-direction: row;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-
-#tamanho-pincel {
-    -webkit-appearance: slider-horizontal;
-    appearance: none;
-    writing-mode: vertical-lr;
-    width: 6px;
-    height: 100%;
-    border-radius: 999px;
-    background: #ddd;
-    outline: none;
-    cursor: pointer;
-    transform: rotate(180deg); 
-}
-
-.area-desenho {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-}
-
-/* Slider vertical de tamanho do pincel */
-.controle-pincel-vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    height: 360px;
-    font-family: inherit;
-}
-
-.controle-pincel-vertical label {
-    font-size: 14px;
-    color: #555;
-    white-space: nowrap;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-}
-
-#valor-tamanho {
-    font-family: 'Manronpe';
-    font-weight: bold;
-    color: #ff69b4;
-    min-width: 20px;
-    text-align: center;
-}
-
-#tamanho-pincel {
-    -webkit-appearance: slider-vertical;
-    appearance: none;
-    writing-mode: vertical-lr;
-    width: 6px;
-    height: 100%;
-    border-radius: 999px;
-    background: #ddd;
-    outline: none;
-    cursor: pointer;
-}
-
-#tamanho-pincel::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #ff69b4;
-    border: 2px solid white;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: transform 0.15s ease;
-}
-
-#tamanho-pincel::-webkit-slider-thumb:hover {
-    transform: scale(1.15);
-}
-
-#tamanho-pincel::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #ff69b4;
-    border: 2px solid white;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: transform 0.15s ease;
-}
-
-#tamanho-pincel::-moz-range-thumb:hover {
-    transform: scale(1.15);
-}
-
-#tamanho-pincel::-moz-range-track {
-    width: 6px;
-    border-radius: 999px;
-    background: #ddd;
-}
-
-.botoes-desenho {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-    transform: rotate(180deg);
-}
-
-.desenho-container {
-    width: 100%;
-    margin: 50px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.controle-pincel-vertical input[type="range"] {
-    transform: scaleY(-1);
-}
-
-/* Modo Celular (Telas menores que 900px) */
-@media (max-width: 900px) {
-    .desenho-container .area-desenho {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .desenho-container .paleta-cores {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    /* Slider vira horizontal no celular para não bugar */
-    .desenho-container .controle-pincel-vertical {
-        flex-direction: row;
-        height: auto;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .desenho-container .controle-pincel-vertical label,
-    .desenho-container #tamanho-pincel {
-        writing-mode: horizontal-tb;
-        transform: none;
-    }
-
-    .desenho-container #tamanho-pincel {
-        width: 150px;
-        height: 6px;
-    }
-
-    .desenho-container #quadro-desenho {
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        aspect-ratio: 510 / 360;
-    }
-}
-
-/* --- Correção Cirúrgica para o Computador --- */
-.desenho {
-    width: 100%;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-}
-
-/* Garante que a paleta, o pincel e o canvas fiquem lado a lado no PC */
-.desenho .area-desenho {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-/* Deixa a paleta em grade vertical no computador */
-.desenho .paleta-cores {
-    display: grid;
-    grid-template-columns: repeat(2, 30px);
-    gap: 8px;
-    margin: 0;
-}
-
-/* Faz o controle do pincel crescer para CIMA no PC */
-.desenho .controle-pincel-vertical #tamanho-pincel {
-    transform: rotate(180deg);
-}
-
-/* Remove conflitos de margem da galeria */
-.galeria-desenhos {
-    width: 100%;
-    max-width: 600px;
-}
+    font-size: 18px;
+    font-weight: 700;
+    color: #b3184f;
+    margin-bottom: 2px;
+    white-space: nowrap
