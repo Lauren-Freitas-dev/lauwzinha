@@ -350,10 +350,10 @@ margin-bottom: 2px;
     font-weight: bold;
     transition: transform 0.1s ease;
     display: flex;
-    align-items: center;       /* Alinha perfeitamente no eixo Y (vertical) */
-    justify-content: center;   /* Centraliza os botões no eixo X (horizontal) */
-    gap: 10px;                 /* Cria um espaçamento opcional entre os dois botões */
-    height: 60px;              /* Defina uma altura para o container funcionar em Y */
+    align-items: center;       
+    justify-content: center; 
+    gap: 10px;                
+    height: 60px;             
 }
 
 }
