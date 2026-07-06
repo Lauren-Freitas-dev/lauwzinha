@@ -11,11 +11,13 @@
     font-weight: normal;
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 p {
     font-size: 35px;
@@ -306,15 +308,6 @@ input#campo-mensagens,
     display: grid;
     justify-content: center;
     align-items: center;
-}
-
-
-* { box-sizing: border-box; }
-}
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 .player {
