@@ -523,20 +523,29 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 900px) {
-  .colunas {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
+    gap: 10px;
     width: 100%;
-    padding: 10px;
-    gap: 15px;
+    flex-direction: row !important; /* Coloca número, slider e texto lado a lado */
+    width: 100%;
+    max-width: 510px; /* Alinha com a largura máxima do canvas */
+    height: auto !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    writing-mode: horizontal-tb !important;
+    width: 60% !important; /* Dá um tamanho bom para deslizar com o polegar */
+    height: 6px !important;
   }
-    .paleta-cores {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 0;
-  width: 100%;
-  max-width: 400px;
+
+  /* Corrige a orientação do texto "Pincel" */
+  .controle-pincel-vertical label {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    font-size: 16px;
+  }
 }
 
   .coluna-esquerda,
