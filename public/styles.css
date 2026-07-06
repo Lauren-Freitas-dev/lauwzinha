@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Manronpe';
     src: url('fonts/Manrope/Manrope-VariableFont_wght.ttf');
@@ -545,29 +544,70 @@ input[type="range"]::-moz-range-thumb {
   .desenho-item {
     width: 100px;
   }
-}
-  padding: 10px 0;
+
+  .area-desenho {
+    flex-direction: column;
+  }
+
+  .controle-pincel-vertical {
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  #tamanho-pincel {
+    -webkit-appearance: none;
+    writing-mode: horizontal-tb;
+    width: 100%;
+    height: 6px;
+  }
+
+  .controle-pincel-vertical label {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
 }
 
-.controle-pincel-vetical {
+/* Container que junta o canvas com o slider de pincel lado a lado */
+.area-desenho {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 12px 0;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Slider vertical de tamanho do pincel */
+.controle-pincel-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    height: 360px;
     font-family: inherit;
 }
 
-.controle-pincel label {
+.controle-pincel-vertical label {
     font-size: 14px;
     color: #555;
     white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+#valor-tamanho {
+    font-weight: bold;
+    color: #ff69b4;
+    min-width: 20px;
+    text-align: center;
 }
 
 #tamanho-pincel {
-    -webkit-appearance: none;
+    -webkit-appearance: slider-vertical;
     appearance: none;
-    width: 150px;
-    height: 6px;
+    writing-mode: vertical-lr;
+    width: 6px;
+    height: 100%;
     border-radius: 999px;
     background: #ddd;
     outline: none;
@@ -610,14 +650,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* Trilho (track) - Firefox precisa disso separado */
 #tamanho-pincel::-moz-range-track {
-    height: 6px;
+    width: 6px;
     border-radius: 999px;
     background: #ddd;
-}
-
-#valor-tamanho {
-    font-weight: bold;
-    color: #ff69b4;
-    min-width: 20px;
-    display: inline-block;
 }
