@@ -261,6 +261,7 @@ input#campo-mensagens,
 }
 
 #btn-enviar-desenho {
+    max-width: 200px;
     border-radius: 20px;
     font-size: 20px;
     display: flex;
@@ -270,7 +271,7 @@ input#campo-mensagens,
     background-color: #ff91c5;
 }
 
-#btn-enviar-desenho {
+#btn-enviar-desenho:hover {
     transform: translateY(-5px);
 }
 
