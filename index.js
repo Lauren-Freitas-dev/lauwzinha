@@ -102,6 +102,7 @@ const PORT = process.env.PORT || 3000;
 
 async function start() {
   await conectarDB();
+  await db.collection('desenhos').createIndex({ ip: 1, data: -1 });
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`Servidor rodando na porta ${PORT}`);
   });
