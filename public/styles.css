@@ -276,14 +276,14 @@ input#campo-mensagens,
 #btn-enviar-desenho {
    width: 180px;      
   height: 45px;   
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 16px; 
   display: flex;
   justify-content: center;
   align-items: center;
   color: #333;
   background-color: #ff91c5;
-  border: 2px solid #333333; /* Borda preta fofa para combinar com o canvas */
+  border: 2px solid #333333;
   cursor: pointer;
   font-family: 'Manronpe', sans-serif;
   font-weight: bold;
@@ -293,14 +293,14 @@ input#campo-mensagens,
 #btn-limpar  {
   width: 180px;      
   height: 45px;   
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 16px; 
   display: flex;
   justify-content: center;
   align-items: center;
   color: #333;
   background-color: #ff91c5;
-  border: 2px solid #333333; /* Borda preta fofa para combinar com o canvas */
+  border: 2px solid #333333;
   cursor: pointer;
   font-family: 'Manronpe', sans-serif;
   font-weight: bold;
