@@ -62,7 +62,7 @@ botao_mensagens.addEventListener('click', function(){
         return;
     }
 
-fetch('http://localhost:3000/mensagens', {
+fetch('/mensagens', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ mensagem: caixa_mensagens, nome: nome_da_pessoa })
