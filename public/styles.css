@@ -656,7 +656,7 @@ input[type="range"]::-moz-range-thumb {
     background: #ddd;
 }
 
-#desenhalgoaqui {
+.desenhalgoaqui {
     justify-content: block;
     text-align: center;
     margin: 0 auto;
