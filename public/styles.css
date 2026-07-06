@@ -223,59 +223,330 @@ textarea#campo-mensagens {
 
 #btn-enviar:hover {
     background-color: #ef88b8;
-    transform: translateY(-5px);
+margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* ==========================================================================
-   4. COMPONENTE: PLAYER DE MÚSICA
-   ========================================================================== */
-.player {
-    width: 360px;
-    background: #fff0f6;
-    border-radius: 24px;
-    padding: 20px;
-    margin-top: 25px;
-    box-shadow: 0 20px 40px rgba(219, 39, 119, 0.35);
-    border: 3px solid #ffb6d9;
-    text-align: center;
+.track-artist {
+    font-size: 14px;
+    color: #cb7a99;
+    margin-bottom: 20px;
 }
 
-.cover {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #ffe1f0, #ff7ab8 70%, #d6336c);
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #cb7a99;
+    margin-bottom: 20px;
+    font-family: 'Manronpe', sans-serif;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #ffd6e8;
+    border-radius: 3px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff7ab8, #e63980);
+    border-radius: 3px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 25px rgba(214, 51, 108, 0.4);
-    border: 6px solid #fff;
-    animation: spin 12s linear infinite;
-    animation-play-state: paused;
+    transition: transform 0.2s;
 }
 
-.cover.playing { 
-    animation-play-state: running; 
+.btn:hover { 
+    transform: scale(1.1); 
 }
 
-.cover::after {
-    content: "";
-    width: 40px;
-    height: 40px;
-    background: #fff0f6;
+.btn-play {
+    width: 50px;
+    height: 50px;
+    background: #ff7ab8;
     border-radius: 50%;
-    border: 2px solid #d6336c;
+    box-shadow: 0 6px 15px rgba(230, 57, 128, 0.3);
 }
 
-@keyframes spin { 
-    from { transform: rotate(0deg); } 
-    to { transform: rotate(360deg); } 
+.btn-play svg { 
+    fill: #fff; 
 }
 
-.track-title {
-    font-size: 18px;
+.btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #ff7ab8;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.volume input {
+    width: 60px;
+    accent-color: #ff7ab8;
+}
+
+.file-label {
+    font-size: 12px;
+    color: #e63980;
+    cursor: pointer;
     font-weight: 700;
-    color: #b3184f;
-    margin-bottom: 2px;
-    white-space: nowrap
+    font-family: 'Manronpe', sans-serif;
+}
+
+.file-label:hover { 
+    text-decoration: underline; 
+}
+
+#fileInput { 
+    display: none; 
+}
+
+.playlist {
+    max-height: 120px;
+    overflow-y: auto;
+    text-align: left;
+    border-top: 1px solid #ffd6e8;
+    padding-top: 10px;
+    font-family: 'Manronpe', sans-serif;
+}
+
+.playlist-item {
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #4a5568;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.playlist-item:hover { 
+    background: #fff5f8; 
+}
+
+.playlist-item.active {
+    background: #ffe6f0;
+    color: #e63980;
+    font-weight: 700;
+}
+
+.empty-msg {
+    font-size: 12px;
+    color: #a0aec0;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ==========================================================================
+   5. SEÇÃO DO DESENHO (RODAPÉ CONFIGURADO)
+   ========================================================================== */
+.desenho {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.area-desenho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.paleta-cores {
+    display: grid;
+    grid-template-columns: repeat(2, 30px);
+    gap: 8px;
+    margin: 0;
+}
+
+.cor-botao {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #333333;
+    cursor: pointer;
+}
+
+.controle-pincel-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    height: 360px;
+}
+
+.controle-pincel-vertical label {
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+#valor-tamanho {
+    font-family: 'Manronpe', sans-serif;
+    font-weight: bold;
+    color: #ff69b4;
+    min-width: 20px;
+    text-align: center;
+}
+
+#tamanho-pincel {
+    -webkit-appearance: none;
+    appearance: none;
+    writing-mode: vertical-lr;
+    width: 6px;
+    height: 100%;
+    border-radius: 999px;
+    background: #ddd;
+    outline: none;
+    cursor: pointer;
+    transform: scaleY(-1); /* Inverte o slider vertical: aumenta para CIMA */
+}
+
+#tamanho-pincel::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff69b4;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+#tamanho-pincel::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff69b4;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.botoes-desenho {
+    display: flex;
+    gap: 15px;
+}
+
+.botoes-desenho button {
+    font-family: 'Manronpe', sans-serif;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btn-enviar-desenho {
+    background-color: #ff91c5;
+}
+
+.galeria-desenhos {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#quadro-desenho {
+    border: 2px solid #333333;
+    background-color: #ffffff;
+    border-radius: 15px;
+    cursor: crosshair;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (CELULAR / MEDIA QUERY)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .colunas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna-direita {
+        margin-right: 0;
+        width: 80%;
+    }
+
+    .area-desenho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .paleta-cores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .controle-pincel-vertical {
+        flex-direction: row;
+        height: auto;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .controle-pincel-vertical label, 
+    #tamanho-pincel {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+
+    #tamanho-pincel {
+        width: 150px;
+        height: 6px;
+    }
+
+    #quadro-desenho {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        aspect-ratio: 510 / 360;
+    }
+}
