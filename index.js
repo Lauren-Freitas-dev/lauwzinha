@@ -12,6 +12,7 @@ const client = new MongoClient(uri, {
   tls: true,
   tlsAllowInvalidCertificates: true
 });
+
 async function conectarDB() {
   try {
     await client.connect();
@@ -19,10 +20,9 @@ async function conectarDB() {
     console.log("✅ Conectado ao MongoDB com sucesso!");
   } catch (error) {
     console.error("❌ Erro crítico no MongoDB:", error);
-    process.exit(1);
-}
-    console.error("❌ Erro ao conectar no MongoDB:", error);
+    process.exit(1); // Força o contêiner a falhar e mostrar o log real de rede
   }
+}
 
 app.get('/', (req, res) => {
     res.send('Servidor da Lauwzinha rodando!');
