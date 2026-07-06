@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ Lauwzinha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <div class="colunas">
+
+        <div class="coluna-esquerda">
+
+            <header class="profile-card">
+
+            <div class="profile-picture" >
+
+                <img src="images/noodle.webp" alt="Imagem Perfil">
+
+            </div>
+
+            <div>
+
+                <h1>Alauwne</h1><p><br> ≽^• ˕ • ྀི≼ <br> ──★ ˙🍓 ̟!! Sobre mim: <br> me chamo lauw, tenho 18 anos, sou artista e programadora no tempo livre. Fica a vontade no meu site! <br> </p>
+            </div>
+        <div class="social-links">
+            <a href="https://x.com/Lauwzinha" target="_blank" class="btn-social">X/twitter</a>
+            <a href="https://www.instagram.com/just_alauwne/" target="_blank" class="btn-social">instagram</a>
+            <a href="https://discord.com/users/1243893777110667419" target="_blank" class="btn-social">Discord</a>
+        </div>
+
+            </header>
+
+        <section class="mensagens">
+            <h1>deixe um recadinho!</h1>
+            <input type="text" id="campo-nome" placeholder="seu nome (ou apelido)" maxlength="30">
+            <textarea id="campo-mensagens" placeholder="digite algo fofinho aqui..." maxlength="280"></textarea>
+            <h4>terminou? lembre-se que <br>
+            será visto por todos!</h4>
+            <p id="contador">0/280</p>
+            <button id="btn-enviar">enviar →</button>
+
+        </section>
+
+        </div>
+
+        <div class="coluna-direita" id="lista-recadinhos">
+            <h2>Recadinhos S2</h2>
+        </div>
+        <div class="player">
+  <div class="cover" id="cover"></div>
+  <div class="track-title" id="trackTitle">Nenhuma música carregada</div>
+  <div class="track-sub" id="trackSub">Adicione arquivos para começar</div>
+
+  <div class="progress-area">
+    <span class="time" id="currentTime">0:00</span>
+    <input type="range" id="seekBar" value="0" min="0" max="100" step="0.1">
+    <span class="time end" id="durationTime">0:00</span>
+  </div>
+
+  <div class="controls">
+    <button class="btn" id="prevBtn" title="Anterior">
+      <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+    </button>
+    <button class="btn btn-play" id="playBtn" title="Tocar/Pausar">
+      <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <button class="btn" id="nextBtn" title="Próxima">
+      <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 6l8.5 6L6 18z"/></svg>
+    </button>
+  </div>
+
+  <div class="bottom-row">
+    <div class="volume">
+      <button class="btn" id="muteBtn" title="Mudo">
+        <svg id="volIcon" viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.72 2.5-2.24 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      </button>
+      <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="0.8">
+    </div>
+    <label class="file-label" for="fileInput">+ Adicionar músicas</label>
+    <input type="file" id="fileInput" accept="audio/*" multiple>
+  </div>
+
+  <div class="playlist" id="playlist">
+    <div class="empty-msg">Sua playlist aparecerá aqui.</div>
+  </div>
+</div>
+
+<audio id="audio"></audio>
+
+
+        <div class="paleta-cores">
+        <button class="cor-botao" style="background-color: black;" data-cor="black"></button>
+        <button class="cor-botao" style="background-color: white;" data-cor="white"></button>
+        <button class="cor-botao" style="background-color: red;" data-cor="red"></button>
+        <button class="cor-botao" style="background-color: orange;" data-cor="orange"></button>
+        <button class="cor-botao" style="background-color: yellow;" data-cor="yellow"></button>
+        <button class="cor-botao" style="background-color: green;" data-cor="green"></button>
+        <button class="cor-botao" style="background-color: blue;" data-cor="blue"></button>
+        <button class="cor-botao" style="background-color: purple;" data-cor="purple"></button>
+        <button class="cor-botao" style="background-color: pink;" data-cor="pink"></button>
+        <button class="cor-botao" style="background-color: brown;" data-cor="brown"></button>
+        <button class="cor-botao" style="background-color: gray;" data-cor="gray"></button>
+        <button class="cor-botao" style="background-color: cyan;" data-cor="cyan"></button>
+        </div>
+
+            <section class="desenho">
+                <h1 id="desenhalgoaqui">Desenha Algo Aqui!</h1>
+                <canvas id="quadro-desenho" width="510" height="360"></canvas>
+                <button id="btn-enviar-desenho">enviar desenho➤</button>
+                <button id="btn-limpar">limpar 🛢</button>
+            <div class="galeria-desenhos" id="galeria-desenhos">
+            <h2>Desenhos da Galera</h2>
+            </div>
+            </section>
+        </div>
+</body>
+
+</html>
