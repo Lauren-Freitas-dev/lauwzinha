@@ -274,35 +274,49 @@ input#campo-mensagens,
 
 
 #btn-enviar-desenho {
-  flex: 1;        
-  padding: 12px;   
+   width: 180px;      
+  height: 45px;   
   border-radius: 20px;
-  font-size: 18px; 
+  font-size: 16px; 
   display: flex;
   justify-content: center;
   align-items: center;
   color: #333;
   background-color: #ff91c5;
-  border: 2px solid #333;
+  border: 2px solid #333333; /* Borda preta fofa para combinar com o canvas */
   cursor: pointer;
-  white-space: nowrap;
+  font-family: 'Manronpe', sans-serif;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 #btn-limpar  {
-  flex: 1;        
-  padding: 12px;   
+  width: 180px;      
+  height: 45px;   
   border-radius: 20px;
-  font-size: 18px; 
+  font-size: 16px; 
   display: flex;
   justify-content: center;
   align-items: center;
   color: #333;
   background-color: #ff91c5;
-  border: 2px solid #333;
+  border: 2px solid #333333; /* Borda preta fofa para combinar com o canvas */
   cursor: pointer;
-  white-space: nowrap;
+  font-family: 'Manronpe', sans-serif;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
- 
+
+
+#btn-limpar:hover {
+    background-color: #ef88b8;
+    transform: translateY(-5px);
+}
+
+#btn-enviar-desenho:hover {
+    background-color: #ef88b8;
+    transform: translateY(-5px);
+}
 
 .galeria-desenhos {
     background-color: #ffffff;
