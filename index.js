@@ -21,10 +21,11 @@ async function conectarDB() {
   try {
     await client.connect();
     db = client.db("lauwzinha");
+    await db.collection('mensagens').createIndex({ ip: 1, data: -1 });
     console.log("✅ Conectado ao MongoDB com sucesso!");
   } catch (error) {
     console.error("❌ Erro crítico no MongoDB:", error);
-    process.exit(1); // Força o contêiner a falhar e mostrar o log real de rede
+    process.exit(1);
   }
 }
 
