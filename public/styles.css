@@ -486,6 +486,7 @@ input[type="range"]::-moz-range-thumb {
 .empty-msg {
   font-size: 12px;
   color: #d6537f;
+}
 
 @media (max-width: 900px) {
   .colunas {
