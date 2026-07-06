@@ -546,8 +546,12 @@ margin-bottom: 2px;
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
+   
 .track-sub {
     font-size: 14px;
     color: #cb7a99;
