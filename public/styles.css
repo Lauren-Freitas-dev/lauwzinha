@@ -356,6 +356,16 @@ margin-bottom: 2px;
 }
 
 #btn-enviar-desenho {
+    display: flex;
+    align-itens: center;
+    justify-content: center;
+    background-color: #ff91c5;
+}
+
+#btn-limpar {
+    display: flex;
+    align-itens: center;
+    justify-content: center;
     background-color: #ff91c5;
 }
 
