@@ -310,16 +310,6 @@ input#campo-mensagens,
 
 
 * { box-sizing: border-box; }
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #ffd1e8, #ff9ecb, #ff6fb1);
-  background-size: 200% 200%;
-  animation: bgMove 12s ease infinite;
 }
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
