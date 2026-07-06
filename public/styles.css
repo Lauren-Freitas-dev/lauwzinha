@@ -11,12 +11,6 @@
     font-weight: normal;
 }
 
-@font-face {
-    font-family: 'Elms-Sans';
-    src: url('fonts/Elms_Sans/ElmsSans-VariableFont_wght.ttf');
-    font-weight: bold;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -135,7 +129,7 @@ h4, h5, h3 {
   background-color: #ffcce6; 
   border: 2px solid #332228;
   border-radius: 20px;
-  font-family: 'Elms-Sans';
+  font-family: 'Manronpe';
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
@@ -152,7 +146,7 @@ input#campo-mensagens,
 .campo-mensagens {
     padding: 15px;
     max-width: 400px;
-    font-family: 'Elms-Sans';
+    font-family: 'Manronpe';
     text-align: center;
     resize: none;
     background-color: #ffd4f6;
@@ -196,7 +190,7 @@ input#campo-mensagens,
 }
 
 #btn-enviar {
-    font-family: 'Elms-Sans' !important;
+    font-family: 'Manronpe' !important;
     font-size: 16px;
     padding: 8px 12px !important;
     font-weight: bold !important;
@@ -217,7 +211,7 @@ input#campo-mensagens,
 #campo-nome {
     padding: 15px;
     max-width: 400px;
-    font-family: 'Elms-Sans';
+    font-family: 'Manronpe';
     text-align: center;
     margin-top: 20px;
     resize: none;
