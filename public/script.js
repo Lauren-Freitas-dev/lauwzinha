@@ -45,7 +45,7 @@ function iniciarDesenho(evento){
     contexto.beginPath();
     contexto.moveTo(posicao.x, posicao.y);
     contexto.strokeStyle = corAtual;
-    contexto.lineWidth = 3;
+    contexto.lineWidth = tamanhoAtual;
 }
 
 function desenharNoCanvas(evento){
