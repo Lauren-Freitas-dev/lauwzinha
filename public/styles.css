@@ -336,6 +336,11 @@ margin-bottom: 2px;
 
 .botoes-desenho {
     display: flex;
+    align-items: center;       
+    justify-content: center; 
+    gap: 10px;                
+    height: 60px;
+    display: flex;
     gap: 15px;
 }
 
@@ -348,12 +353,7 @@ margin-bottom: 2px;
     background-color: #fff;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.1s ease;
-    display: flex;
-    align-items: center;       
-    justify-content: center; 
-    gap: 10px;                
-    height: 60px;             
+    transition: transform 0.1s ease;             
 }
 
 }
@@ -455,8 +455,7 @@ margin-bottom: 2px;
         height: auto;
         aspect-ratio: 510 / 360;
     }
-
-    /* Exibe em 2 por linha ou 1 por linha no celular para não esmagar */
+   
     .galeria-desenhos div:not(.botoes-desenho) {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
