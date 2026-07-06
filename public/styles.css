@@ -64,17 +64,17 @@ h4, h5 {
 
 .coluna-direita {
     font-family: 'yuyu';
-    max-width: 450px;
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
     border: 2px solid #333;
-    background-color: ##ffd4e9;
+    background-color: #ffffff;
     color: #333333;
-    width: 90%;
+    width: 100%;
     margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 35px;
     box-shadow: 0 8px 24px rgba(255, 145, 196, 0.6);
-    box-sizing: border-box;
+    
 }
 
 /* ==========================================================================
@@ -186,19 +186,14 @@ textarea#campo-mensagens {
 
 #lista-recadinhos {
     font-family: 'yuyu';
-    max-width: 450px;
-    display: flex;
-    itens-align: center;
-    text-align: center;
-    font-size: 18px;
+    max-width: 100%;
+    display: grid;
     border: 2px solid #333;
-    background-color: #ffffff;
+    background-color: #ffdaea;
     color: #333333;
-    width: 90%;
-    margin-top: 30px;
+    width: 95%;
+    margin: 10px auto;
     border-radius: 35px;
-    box-shadow: 0 8px 24px rgba(255, 145, 196, 0.6);
-    box-sizing: border-box;
 }
 
 #btn-enviar {
