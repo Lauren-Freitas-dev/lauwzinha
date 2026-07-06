@@ -277,6 +277,8 @@ input#campo-mensagens,
 }
 
 #btn-limpar {
+    margin: 0 auto;
+    max-width: 200px;
     border-radius: 20px;
     font-size: 20px;
     display: flex;
@@ -284,6 +286,10 @@ input#campo-mensagens,
     align-items: center;
     color: #333;
     background-color: #ff91c5;
+}
+
+#btn-limpar:hover {
+    transform: translateY(-5px);
 }
 
 .galeria-desenhos {
