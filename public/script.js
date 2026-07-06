@@ -86,7 +86,7 @@ let botao_enviar_desenho = document.getElementById('btn-enviar-desenho');
 botao_enviar_desenho.addEventListener('click', function(){
     let imagemBase64 = canvas.toDataURL();
 
-    fetch('http://localhost:3000/desenhos', {
+    fetch('/desenhos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ imagem: imagemBase64 })
