@@ -657,5 +657,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #desenhalgoaqui {
+    text-align: center;
     padding: 10px 20px;
 }
