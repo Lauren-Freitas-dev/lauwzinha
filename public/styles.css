@@ -228,150 +228,6 @@ margin-bottom: 2px;
     text-overflow: ellipsis;
 }
 
-.track-artist {
-    font-size: 14px;
-    color: #cb7a99;
-    margin-bottom: 20px;
-}
-
-.progress-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #cb7a99;
-    margin-bottom: 20px;
-    font-family: 'Manronpe', sans-serif;
-}
-
-.progress-bar {
-    flex: 1;
-    height: 6px;
-    background: #ffd6e8;
-    border-radius: 3px;
-    margin: 0 10px;
-    position: relative;
-    cursor: pointer;
-}
-
-.progress {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #ff7ab8, #e63980);
-    border-radius: 3px;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s;
-}
-
-.btn:hover { 
-    transform: scale(1.1); 
-}
-
-.btn-play {
-    width: 50px;
-    height: 50px;
-    background: #ff7ab8;
-    border-radius: 50%;
-    box-shadow: 0 6px 15px rgba(230, 57, 128, 0.3);
-}
-
-.btn-play svg { 
-    fill: #fff; 
-}
-
-.btn svg {
-    width: 24px;
-    height: 24px;
-    fill: #ff7ab8;
-}
-
-.bottom-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.volume {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.volume input {
-    width: 60px;
-    accent-color: #ff7ab8;
-}
-
-.file-label {
-    font-size: 12px;
-    color: #e63980;
-    cursor: pointer;
-    font-weight: 700;
-    font-family: 'Manronpe', sans-serif;
-}
-
-.file-label:hover { 
-    text-decoration: underline; 
-}
-
-#fileInput { 
-    display: none; 
-}
-
-.playlist {
-    max-height: 120px;
-    overflow-y: auto;
-    text-align: left;
-    border-top: 1px solid #ffd6e8;
-    padding-top: 10px;
-    font-family: 'Manronpe', sans-serif;
-}
-
-.playlist-item {
-    font-size: 13px;
-    padding: 6px 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #4a5568;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.playlist-item:hover { 
-    background: #fff5f8; 
-}
-
-.playlist-item.active {
-    background: #ffe6f0;
-    color: #e63980;
-    font-weight: 700;
-}
-
-.empty-msg {
-    font-size: 12px;
-    color: #a0aec0;
-    text-align: center;
-    padding: 10px;
-}
-
 /* ==========================================================================
    5. SEÇÃO DO DESENHO (RODAPÉ)
    ========================================================================= */
@@ -505,7 +361,6 @@ margin-bottom: 2px;
     background-color: #ff91c5;
 }
 
-/* Organiza as fotos salvas em linhas de 3 em 3 elementos */
 .galeria-desenhos {
     width: 100%;
     margin-top: 20px;
@@ -517,7 +372,6 @@ margin-bottom: 2px;
     margin-bottom: 20px;
 }
 
-/* O segredo para exibir 3 por linha no desktop */
 .galeria-desenhos div:not(.botoes-desenho) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -616,6 +470,37 @@ margin-bottom: 2px;
 /* ==========================================================================
    ESTILOS DO PLAYER DE MÚSICA
    ========================================================================== */
+
+.playlist {
+    max-height: 120px;
+    overflow-y: auto;
+    text-align: left;
+    border-top: 1px solid #ffd6e8;
+    padding-top: 10px;
+    font-family: 'Manronpe', sans-serif;
+}
+
+.playlist-item {
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #4a5568;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.playlist-item:hover { 
+    background: #fff5f8; 
+}
+
+.playlist-item.active {
+    background: #ffe6f0;
+    color: #e63980;
+    font-weight: 700;
+}
+
 .player {
     font-family: 'Manronpe', sans-serif;
     background-color: #ffffff;
@@ -676,4 +561,119 @@ margin-bottom: 2px;
     flex: 1;
     margin: 0 10px;
     accent-color: #ff7ab8; /* Deixa a barra de progresso rosa */
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.volume input {
+    width: 60px;
+    accent-color: #ff7ab8;
+}
+
+.file-label {
+    font-size: 12px;
+    color: #e63980;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Manronpe', sans-serif;
+}
+
+.file-label:hover { 
+    text-decoration: underline; 
+}
+
+#fileInput { 
+    display: none; 
+}
+
+
+.track-artist {
+    font-size: 14px;
+    color: #cb7a99;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #cb7a99;
+    margin-bottom: 20px;
+    font-family: 'Manronpe', sans-serif;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #ffd6e8;
+    border-radius: 3px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff7ab8, #e63980);
+    border-radius: 3px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.btn:hover { 
+    transform: scale(1.1); 
+}
+
+.btn-play {
+    width: 50px;
+    height: 50px;
+    background: #ff7ab8;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(230, 57, 128, 0.3);
+}
+
+.btn-play svg { 
+    fill: #fff; 
+}
+
+.btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #ff7ab8;
+}
+
+.empty-msg {
+    font-size: 12px;
+    color: #a0aec0;
+    text-align: center;
+    padding: 10px;
 }
