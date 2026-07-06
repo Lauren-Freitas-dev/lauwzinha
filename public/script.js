@@ -51,16 +51,18 @@ function pararDesenho(){
     desenhando = false;
 }
 
+// Mouse (desktop)
 canvas.addEventListener('mousedown', iniciarDesenho);
 canvas.addEventListener('mousemove', desenharNoCanvas);
 canvas.addEventListener('mouseup', pararDesenho);
 canvas.addEventListener('mouseleave', pararDesenho);
 
+// Touch (celular/tablet)
 canvas.addEventListener('touchstart', iniciarDesenho, { passive: false });
 canvas.addEventListener('touchmove', desenharNoCanvas, { passive: false });
 canvas.addEventListener('touchend', pararDesenho);
 canvas.addEventListener('touchcancel', pararDesenho);
-        
+
 let botao_limpar = document.getElementById('btn-limpar');
 botao_limpar.addEventListener('click', function(){
     contexto.clearRect(0, 0, canvas.width, canvas.height);
@@ -70,14 +72,16 @@ function carregarMensagens() {
     fetch('/mensagens')
         .then(resposta => resposta.json())
         .then(lista => {
-        let container = document.getElementById('lista-recadinhos');
-        lista.forEach(mensagemAtual => {
-        let novoParagrafo = document.createElement('p');
-        novoParagrafo.classList.add('recadinho');
-        novoParagrafo.innerHTML = `<strong>${mensagemAtual.nome}:</strong> ${mensagemAtual.texto}`;
-        container.appendChild(novoParagrafo);
-});
-            
+            let container = document.getElementById('lista-recadinhos');
+            lista.forEach(mensagemAtual => {
+                let novoParagrafo = document.createElement('p');
+                novoParagrafo.classList.add('recadinho');
+                novoParagrafo.innerHTML = `<strong>${mensagemAtual.nome}:</strong> ${mensagemAtual.texto}`;
+                container.appendChild(novoParagrafo);
+            });
+        });
+}
+
 botao_mensagens.addEventListener('click', function(){
     let caixa_mensagens = document.getElementById("campo-mensagens").value;
     let nome_da_pessoa = document.getElementById("campo-nome").value;
@@ -87,15 +91,15 @@ botao_mensagens.addEventListener('click', function(){
         return;
     }
 
-fetch('/mensagens', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ mensagem: caixa_mensagens, nome: nome_da_pessoa })
-})
-.then(resposta => resposta.text())
-.then(textoResposta => {
-    alert(textoResposta);
-});
+    fetch('/mensagens', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mensagem: caixa_mensagens, nome: nome_da_pessoa })
+    })
+    .then(resposta => resposta.text())
+    .then(textoResposta => {
+        alert(textoResposta);
+    });
 });
 
 let campo_mensagem = document.getElementById("campo-mensagens");
