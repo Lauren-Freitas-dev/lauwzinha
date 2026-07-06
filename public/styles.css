@@ -549,7 +549,7 @@ input[type="range"]::-moz-range-thumb {
   padding: 10px 0;
 }
 
-.controle-pincel {
+.controle-pincel-vetical {
     display: flex;
     align-items: center;
     gap: 10px;
