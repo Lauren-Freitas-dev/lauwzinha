@@ -261,10 +261,7 @@ input#campo-mensagens,
 }
 
 #btn-enviar-desenho {
-     margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-    margin: 0 auto;
+    box-sizing: border-box;
     max-width: 150px;
     border-radius: 20px;
     font-size: 20px;
@@ -280,10 +277,7 @@ input#campo-mensagens,
 }
 
 #btn-limpar {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-    margin: 0 auto;
     max-width: 150px;
     border-radius: 20px;
     font-size: 20px;
@@ -671,5 +665,6 @@ input[type="range"]::-moz-range-thumb {
 .botoes-desenho {
   display: flex;
   justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
 }
-
