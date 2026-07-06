@@ -584,7 +584,7 @@ input[type="range"]::-moz-range-thumb {
     flex-direction: column;
   }
 
-  .controle-pincel-vertical {
+  .controle-pincel-horizontal {
     flex-direction: row;
     width: 100%;
     max-width: 400px;
