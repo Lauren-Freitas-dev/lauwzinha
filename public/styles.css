@@ -33,11 +33,6 @@ body {
     align-items: center;
 }
 
-p {
-    font-size: 35px;
-    font-weight: 700;
-}
-
 h1, h2, h3 {
     font-family: 'Manronpe', sans-serif;
     color: #333;
@@ -68,18 +63,18 @@ h4, h5 {
 }
 
 .coluna-direita {
-    gap: 20px;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    max-height: 500px;
-    overflow-y: auto;
-    background-color: #ffffff;
-    border-radius: 30px;
-    border: 2px solid #ff91c5;
-    padding: 20px;
-    margin-bottom: 10px;
+    font-family: 'yuyu';
+    max-width: 450px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #333;
+    background-color: ##ffd4e9;
+    color: #333333;
+    width: 90%;
+    margin-top: 30px;
+    border-radius: 35px;
+    box-shadow: 0 8px 24px rgba(255, 145, 196, 0.6);
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
