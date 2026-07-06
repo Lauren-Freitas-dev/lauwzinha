@@ -12,26 +12,57 @@ botoesCores.forEach(function(botao){
 });
 
 
-canvas.addEventListener('mousedown', function(evento){
+function pegarPosicao(evento) {
+    const retangulo = canvas.getBoundingClientRect();
+    const escalaX = canvas.width / retangulo.width;
+    const escalaY = canvas.height / retangulo.height;
+
+    if (evento.touches && evento.touches.length > 0) {
+        return {
+            x: (evento.touches[0].clientX - retangulo.left) * escalaX,
+            y: (evento.touches[0].clientY - retangulo.top) * escalaY
+        };
+    }
+
+    return {
+        x: (evento.clientX - retangulo.left) * escalaX,
+        y: (evento.clientY - retangulo.top) * escalaY
+    };
+}
+
+function iniciarDesenho(evento){
+    evento.preventDefault();
     desenhando = true;
+    const posicao = pegarPosicao(evento);
     contexto.beginPath();
-    contexto.moveTo(evento.offsetX, evento.offsetY);
+    contexto.moveTo(posicao.x, posicao.y);
     contexto.strokeStyle = corAtual;
     contexto.lineWidth = 3;
-});
-canvas.addEventListener('mousemove', function(evento){
-    if (desenhando) {
-        contexto.lineTo(evento.offsetX, evento.offsetY);
-        contexto.stroke();
-    }
-});
+}
 
-canvas.addEventListener('mouseup', function(){
-    desenhando = false;
-});
+function desenharNoCanvas(evento){
+    if (!desenhando) return;
+    evento.preventDefault();
+    const posicao = pegarPosicao(evento);
+    contexto.lineTo(posicao.x, posicao.y);
+    contexto.stroke();
+}
 
-canvas.addEventListener('mouseleave', function(){
+function pararDesenho(){
     desenhando = false;
+}
+
+// Mouse (desktop)
+canvas.addEventListener('mousedown', iniciarDesenho);
+canvas.addEventListener('mousemove', desenharNoCanvas);
+canvas.addEventListener('mouseup', pararDesenho);
+canvas.addEventListener('mouseleave', pararDesenho);
+
+// Touch (celular/tablet)
+canvas.addEventListener('touchstart', iniciarDesenho, { passive: false });
+canvas.addEventListener('touchmove', desenharNoCanvas, { passive: false });
+canvas.addEventListener('touchend', pararDesenho);
+canvas.addEventListener('touchcancel', pararDesenho);
 });
 
 let botao_limpar = document.getElementById('btn-limpar');
