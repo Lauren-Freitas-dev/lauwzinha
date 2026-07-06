@@ -12,20 +12,17 @@ const client = new MongoClient(uri, {
   tls: true,
   tlsAllowInvalidCertificates: true
 });
-
-let db; // vai guardar a conexão
-
 async function conectarDB() {
   try {
     await client.connect();
-    db = client.db("lauwzinha"); // nome do banco com w minúsculo
+    db = client.db("lauwzinha");
     console.log("✅ Conectado ao MongoDB com sucesso!");
   } catch (error) {
+    console.error("❌ Erro crítico no MongoDB:", error);
+    process.exit(1);
+}
     console.error("❌ Erro ao conectar no MongoDB:", error);
   }
-}
-
-// ===================== ROTAS =====================
 
 app.get('/', (req, res) => {
     res.send('Servidor da Lauwzinha rodando!');
