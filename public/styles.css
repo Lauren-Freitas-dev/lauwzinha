@@ -725,3 +725,55 @@ input[type="range"]::-moz-range-thumb {
   gap: 15px;
   margin-top: 15px;
 }
+
+/* Correção do sentido do pincel para aumentar para CIMA */
+#tamanho-pincel {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 900px) {
+  .desenho {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px;
+  }
+
+  .area-desenho {
+    flex-direction: column !important;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .paleta-cores {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+
+  .controle-pincel-vertical {
+    flex-direction: row !important;
+    height: auto !important;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .controle-pincel-vertical label {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+  }
+
+  #tamanho-pincel {
+    writing-mode: horizontal-tb !important;
+    width: 150px !important;
+    height: 6px !important;
+    transform: none !important;
+  }
+
+  #quadro-desenho {
+    width: 100% !important;
+    max-width: 450px;
+    height: auto !important;
+    aspect-ratio: 510 / 360;
+  }
+}
