@@ -74,25 +74,20 @@ app.post('/mensagens', async (req, res) => {
     }
 });
 
+app.get('/desenhos', async (req, res) => {
+    try {
+        const desenhos = await db.collection('desenhos').find().toArray();
+        res.json(desenhos);
+    } catch (e) {
+        res.status(500).send("Erro ao buscar desenhos");
+    }
+});
+
 app.post('/desenhos', async (req, res) => {
     try {
         const { imagem } = req.body;
-        const ip = req.ip;
-      
-        const umaSemanaAtras = new Date();
-        umaSemanaAtras.setDate(umaSemanaAtras.getDate() - 7);
-
-        const jaDesenhou = await db.collection('desenhos').findOne({
-            ip: ip,
-            data: { $gt: umaSemanaAtras }
-        });
-
-        if (jaDesenhou) {
-            return res.send('Você já enviou um desenho essa semana! Volte em breve 💗');
-        }
 
         await db.collection('desenhos').insertOne({
-            ip: ip,
             imagem: imagem,
             data: new Date()
         });
@@ -107,7 +102,6 @@ const PORT = process.env.PORT || 3000;
 
 async function start() {
   await conectarDB();
-  await db.collection('desenhos').createIndex({ ip: 1, data: -1 });
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`Servidor rodando na porta ${PORT}`);
   });
