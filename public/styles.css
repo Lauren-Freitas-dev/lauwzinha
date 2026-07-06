@@ -272,24 +272,21 @@ input#campo-mensagens,
     background-color: #ff91c5;
 }
 
-#btn-enviar-desenho:hover {
-    transform: translateY(-5px);
-}
 
+#btn-enviar-desenho, 
 #btn-limpar {
-  box-sizing: border-box;
-    max-width: 150px;
-    border-radius: 20px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    background-color: #ff91c5;
-}
-
-#btn-limpar:hover {
-    transform: translateY(-5px);
+  flex: 1;        
+  padding: 12px;   
+  border-radius: 20px;
+  font-size: 18px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #ff91c5;
+  border: 2px solid #333;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .galeria-desenhos {
