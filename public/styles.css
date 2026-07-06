@@ -471,13 +471,15 @@ margin-bottom: 2px;
    ESTILOS DO PLAYER DE MÚSICA
    ========================================================================== */
 
-.playlist {
+..playlist {
     max-height: 120px;
     overflow-y: auto;
     text-align: left;
     border-top: 1px solid #ffd6e8;
     padding-top: 10px;
     font-family: 'Manronpe', sans-serif;
+    width: 100%; /* Obriga a respeitar a largura do player */
+    box-sizing: border-box;
 }
 
 .playlist-item {
@@ -489,7 +491,8 @@ margin-bottom: 2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+    display: block;
+    width: 100%;
 
 .playlist-item:hover { 
     background: #fff5f8; 
@@ -563,11 +566,12 @@ margin-bottom: 2px;
     accent-color: #ff7ab8; /* Deixa a barra de progresso rosa */
 }
 
-.bottom-row {
+bottom-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    width: 100%; /* Evita que os botões fiquem espremidos */
 }
 
 .volume {
