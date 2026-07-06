@@ -1,3 +1,5 @@
+let db;
+
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
