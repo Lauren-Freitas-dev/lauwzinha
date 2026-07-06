@@ -1,9 +1,8 @@
-let db;
-
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
 const express = require('express');
+let db;
 
 const app = express();
 app.use(express.json());
@@ -99,8 +98,13 @@ app.post('/desenhos', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-conectarDB().then(() => {
-    app.listen(PORT, '0.0.0.0', () => {
-        console.log(`Servidor rodando na porta ${PORT}`);
-    });
-});
+const PORT = process.env.PORT || 3000;
+
+async function start() {
+  await conectarDB();
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
+}
+
+start();
