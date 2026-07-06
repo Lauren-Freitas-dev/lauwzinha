@@ -8,6 +8,8 @@ let botoesCores = document.querySelectorAll('.cor-botao');
 botoesCores.forEach(function(botao){
     botao.addEventListener('click', function(){
         corAtual = botao.getAttribute('data-cor');
+    });
+});
 
 function pegarPosicao(evento) {
     const retangulo = canvas.getBoundingClientRect();
@@ -49,13 +51,11 @@ function pararDesenho(){
     desenhando = false;
 }
 
-// Mouse (desktop)
 canvas.addEventListener('mousedown', iniciarDesenho);
 canvas.addEventListener('mousemove', desenharNoCanvas);
 canvas.addEventListener('mouseup', pararDesenho);
 canvas.addEventListener('mouseleave', pararDesenho);
 
-// Touch (celular/tablet)
 canvas.addEventListener('touchstart', iniciarDesenho, { passive: false });
 canvas.addEventListener('touchmove', desenharNoCanvas, { passive: false });
 canvas.addEventListener('touchend', pararDesenho);
