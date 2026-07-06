@@ -7,6 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use(express.static('public'));
+
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri, {
   tls: true,
