@@ -20,8 +20,12 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #f6d3e3, #fff, #d65e98);
+    margin: 0;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #ffd1e8, #ffe6ed);
     background-attachment: fixed;
     font-family: 'yuyu', sans-serif;
     display: flex;
@@ -468,17 +472,6 @@ margin-bottom: 2px;
 /* ==========================================================================
    ESTILOS DO PLAYER DE MÚSICA
    ========================================================================== */
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #ffd1e8, #ff9ecb, #ff6fb1);
-    background-size: 200% 200%;
-    animation: bgMove 12s ease infinite;
-  }
   @keyframes bgMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
