@@ -472,10 +472,10 @@ margin-bottom: 2px;
 }
 
 /* ==========================================================================
-   ESTILOS DO PLAYER DE MÚSICA
+/*    ESTILOS DO PLAYER DE MÚSICA
    ========================================================================== */
 
-..playlist {
+.playlist {
     max-height: 120px;
     overflow-y: auto;
     text-align: left;
@@ -689,4 +689,6 @@ bottom-row {
     color: #a0aec0;
     text-align: center;
     padding: 10px;
+
+}
 }
