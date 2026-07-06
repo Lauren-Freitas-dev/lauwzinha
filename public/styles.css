@@ -80,6 +80,8 @@ h4, h5 {
 /* ==========================================================================
    3. COMPONENTES: PERFIL E RECADOS
    ========================================================================== */
+
+
 .profile-card {
     font-family: "yuyu";
     margin-top: 30px;
@@ -221,6 +223,8 @@ margin-bottom: 2px;
 /* ==========================================================================
    5. SEÇÃO DO DESENHO (RODAPÉ)
    ========================================================================= */
+
+
 .desenho {
     border: 2px solid #ff91c5;
     background-color: #ffffff;
@@ -389,7 +393,14 @@ margin-bottom: 2px;
 }
 
 #desenhos-da-galera {
-   font-size: 40px;
+   font-size: 60px;
+   font-weight: 900;
+}
+
+#desenhalgoaqui {
+   font-size: 60px;
+   font-weight: 900;
+   padding: 30px
 }
 
 /* ==========================================================================
