@@ -475,39 +475,6 @@ margin-bottom: 2px;
 /*    ESTILOS DO PLAYER DE MÚSICA
    ========================================================================== */
 
-.playlist {
-    max-height: 120px;
-    overflow-y: auto;
-    text-align: left;
-    border-top: 1px solid #ffd6e8;
-    padding-top: 10px;
-    font-family: 'Manronpe', sans-serif;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.playlist-item {
-    font-size: 13px;
-    padding: 6px 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #4a5568;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    width: 100%;
-
-.playlist-item:hover { 
-    background: #fff5f8; 
-}
-
-.playlist-item.active {
-    background: #ffe6f0;
-    color: #e63980;
-    font-weight: 700;
-}
-
 .player {
     font-family: 'Manronpe', sans-serif;
     background-color: #ffffff;
@@ -518,177 +485,17 @@ margin-bottom: 2px;
     width: 100%;
     text-align: center;
     box-shadow: 0 8px 24px rgba(255, 145, 196, 0.6);
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 30px auto;
     overflow: hidden;
-}
-
-.cover {
-    width: 100px;
-    height: 100px;
-    background-color: #ffd4f6;
-    border-radius: 50%;
-    margin: 0 auto 15px auto;
-    border: 2px solid #ff91c5;
-}
-
-.cover.playing {
-    animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-    100% { transform: rotate(360deg); }
 }
 
 .track-title {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 5px;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-   
-.track-sub {
-    font-size: 14px;
-    color: #cb7a99;
-    margin-bottom: 20px;
-}
-
-.progress-area {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 12px;
-    color: #cb7a99;
-    margin-bottom: 20px;
-}
-
-#seekBar {
-    flex: 1;
-    margin: 0 10px;
-    accent-color: #ff7ab8; /* Deixa a barra de progresso rosa */
-}
-
-bottom-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    width: 100%; /* Evita que os botões fiquem espremidos */
-}
-
-.volume {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.volume input {
-    width: 60px;
-    accent-color: #ff7ab8;
-}
-
-.file-label {
-    font-size: 12px;
-    color: #e63980;
-    cursor: pointer;
-    font-weight: 700;
-    font-family: 'Manronpe', sans-serif;
-}
-
-.file-label:hover { 
-    text-decoration: underline; 
-}
-
-#fileInput { 
-    display: none; 
-}
-
-
-.track-artist {
-    font-size: 14px;
-    color: #cb7a99;
-    margin-bottom: 20px;
-}
-
-.progress-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #cb7a99;
-    margin-bottom: 20px;
-    font-family: 'Manronpe', sans-serif;
-}
-
-.progress-bar {
-    flex: 1;
-    height: 6px;
-    background: #ffd6e8;
-    border-radius: 3px;
-    margin: 0 10px;
-    position: relative;
-    cursor: pointer;
-}
-
-.progress {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #ff7ab8, #e63980);
-    border-radius: 3px;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s;
-}
-
-.btn:hover { 
-    transform: scale(1.1); 
-}
-
-.btn-play {
-    width: 50px;
-    height: 50px;
-    background: #ff7ab8;
-    border-radius: 50%;
-    box-shadow: 0 6px 15px rgba(230, 57, 128, 0.3);
-}
-
-.btn-play svg { 
-    fill: #fff; 
-}
-
-.btn svg {
-    width: 24px;
-    height: 24px;
-    fill: #ff7ab8;
-}
-
-.empty-msg {
-    font-size: 12px;
-    color: #a0aec0;
-    text-align: center;
-    padding: 10px;
-
-}
+    margin-bottom: 5px;
 }
