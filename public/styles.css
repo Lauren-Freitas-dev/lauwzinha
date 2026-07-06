@@ -581,7 +581,7 @@ input[type="range"]::-moz-range-thumb {
     flex-direction: column;
   }
 
-  .controle-pincel-horizontal {
+  .controle-pincel-vertical {
     flex-direction: row;
     width: 100%;
     max-width: 400px;
@@ -595,8 +595,8 @@ input[type="range"]::-moz-range-thumb {
     height: 6px;
   }
 
-  .controle-pincel-horizontal label {
-    writing-mode: horizontal-tb;
+  .controle-pincel-vertical label {
+    writing-mode: vertical-tb;
     transform: none;
   }
 }
@@ -635,7 +635,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #tamanho-pincel {
-    -webkit-appearance: slider-horizontal;
+    -webkit-appearance: slider-vertical;
     appearance: none;
     writing-mode: vertical-lr;
     width: 6px;
