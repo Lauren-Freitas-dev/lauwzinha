@@ -98,7 +98,7 @@ botao_enviar_desenho.addEventListener('click', function(){
 });
 
 function carregarDesenhos() {
-    fetch('http://localhost:3000/desenhos')
+    fetch('/desenhos')
         .then(resposta => resposta.json())
         .then(lista => {
             let galeria = document.getElementById('galeria-desenhos');
